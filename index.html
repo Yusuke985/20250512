@@ -1,9 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>テストのＷｅｂページ</title>
-  </head>
-  <body>ｒｆｒふぇｒｆき換えましたあ
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〇〇大学 学食ガイド</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>〇〇大学 学食ガイド</h1>
+            <p>学生生活を彩る美味しいランチと憩いの場所</p>
+        </div>
+    </header>
+
+    <nav id="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#about">学食について</a></li>
+                <li><a href="#menu">今日のメニュー</a></li>
+                <li><a href="#hours">営業時間・場所</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="hero-section">
+            <div class="container">
+                <h2>〇〇大学 学食へようこそ！</h2>
+                <p>日替わり定食から、麺類、カレー、丼ものまで、毎日飽きさせない豊富なメニューが自慢です。健康的で美味しい食事を、リーズナブルな価格で提供しています。勉強の合間の休憩や、友達とのランチタイムにぜひご利用ください。</p>
+                <div class="image-gallery">
+                    <img src="images/shokudo_interior.jpg" alt="学食の広々とした内装" class="gallery-item active">
+                    <img src="images/shokudo_dish1.jpg" alt="美味しそうな日替わり定食" class="gallery-item">
+                    <img src="images/shokudo_dish2.jpg" alt="ボリューミーなカレーライス" class="gallery-item">
+                    <div class="gallery-nav">
+                        <button class="prev-button">&lt;</button>
+                        <button class="next-button">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>本日のスペシャルメニュー</h2>
+                <div class="menu-item">
+                    <h3>日替わり定食A: 鶏肉の甘辛炒め定食</h3>
+                    <p>ごはん、味噌汁、小鉢付き。栄養バランスも抜群！</p>
+                    <p class="price">価格: 500円</p>
+                </div>
+                <div class="menu-item">
+                    <h3>日替わり定食B: サーモンフライとタルタルソース</h3>
+                    <p>サクサクのサーモンフライに自家製タルタルソースがたっぷり。</p>
+                    <p class="price">価格: 550円</p>
+                </div>
+                <div class="menu-item">
+                    <h3>定番メニュー</h3>
+                    <ul>
+                        <li><span class="item-name">学食カレー</span> <span class="item-price">400円</span></li>
+                        <li><span class="item-name">かけうどん/そば</span> <span class="item-price">300円</span></li>
+                        <li><span class="item-name">カツ丼</span> <span class="item-price">600円</span></li>
+                    </ul>
+                </div>
+                <p class="note">メニューは毎日変わります。詳細は学食内の掲示をご確認ください。</p>
+            </div>
+        </section>
+
+        <section id="hours" class="info-section">
+            <div class="container">
+                <h2>営業時間・アクセス</h2>
+                <div class="info-details">
+                    <div class="info-item">
+                        <h3>営業時間</h3>
+                        <p>平日: 11:00 ～ 14:00 (ランチタイム)<br>14:00 ～ 17:00 (カフェタイム)</p>
+                        <p>土日祝: 休業</p>
+                        <p class="note">長期休暇中は営業時間が変更になる場合があります。詳細は大学のお知らせをご確認ください。</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>場所</h3>
+                        <p>大学A棟 1階</p>
+                        <div class="map-container">
+                            <p>[ここにGoogleマップの埋め込みを貼り付け]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <p>学食に関するご意見、ご要望はこちらまでお寄せください。</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">お名前:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 〇〇大学 学食ガイド</p>
+        </div>
+    </footer>
+</body>
 </html>
