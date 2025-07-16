@@ -1,0 +1,383 @@
+/* 全体的なスタイル設定 */
+body {
+    font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* 薄いグレーの背景 */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+#main-header {
+    background-color: #4CAF50; /* 緑系の色 */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#main-header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+}
+
+#main-header p {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+/* ナビゲーション */
+#main-nav {
+    background-color: #388E3C; /* ヘッダーより少し濃い緑 */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 小さい画面で折り返す */
+}
+
+#main-nav ul li {
+    margin: 0 15px;
+}
+
+#main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#main-nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* 各セクションの共通スタイル */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after { /* 見出しの下線（装飾） */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #4CAF50;
+    margin: 10px auto 0;
+}
+
+/* Heroセクション (学食について) */
+.hero-section {
+    text-align: center;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 20px auto 40px;
+}
+
+/* 画像ギャラリー */
+.image-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* ギャラリーの最大幅 */
+    margin: 30px auto;
+    overflow: hidden; /* 画像がはみ出さないように */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.gallery-item {
+    width: 100%;
+    display: none; /* デフォルトでは非表示 */
+    border-radius: 8px;
+    height: 350px; /* 画像の高さを固定 */
+    object-fit: cover; /* 画像がはみ出さず、縦横比を維持して表示 */
+}
+
+.gallery-item.active {
+    display: block; /* アクティブな画像のみ表示 */
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.gallery-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* メニューセクション */
+.menu-section .menu-item {
+    background-color: #e8f5e9; /* 薄い緑の背景 */
+    border-left: 5px solid #4CAF50;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-section .menu-item h3 {
+    color: #2E7D32; /* 濃い緑 */
+    margin-top: 0;
+}
+
+.menu-section .menu-item .price {
+    font-weight: bold;
+    color: #D32F2F; /* 赤系 */
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-section ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.menu-section ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-section .item-name {
+    font-weight: bold;
+}
+
+.menu-section .item-price {
+    color: #D32F2F;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 営業時間・場所セクション */
+.info-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 小さい画面で折り返す */
+    gap: 30px;
+    text-align: center;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 280px; /* アイテムの最小幅 */
+    background-color: #e8f5e9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.info-item h3 {
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px; /* マップの高さ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee; /* マップがない場合の背景色 */
+    color: #666;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* お問い合わせフォーム */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* padding分を引く */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* 垂直方向のみリサイズ可能 */
+}
+
+.contact-section button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-section button:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* フッター */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* レスポンシブデザインの調整 */
+@media (max-width: 768px) {
+    #main-header h1 {
+        font-size: 2em;
+    }
+
+    #main-nav ul li {
+        margin: 0 8px;
+    }
+
+    #main-nav ul li a {
+        padding: 6px 10px;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .info-details {
+        flex-direction: column; /* 縦並びに変更 */
+        align-items: center;
+    }
+
+    .info-item {
+        width: 90%; /* 幅を広げる */
+        margin-bottom: 20px;
+    }
+
+    .contact-section form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-header h1 {
+        font-size: 1.8em;
+    }
+
+    #main-header p {
+        font-size: 0.9em;
+    }
+
+    #main-nav ul {
+        flex-direction: column; /* 縦並びにして、メニューをより見やすく */
+        align-items: center;
+    }
+
+    #main-nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+    .gallery-item {
+        height: 250px; /* モバイルでの画像の高さ調整 */
+    }
+    .map-container {
+        height: 200px;
+    }
+}
